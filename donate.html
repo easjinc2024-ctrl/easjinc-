@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EASJ INC | Donate & Support</title>
+  <meta name="description" content="Support EASJ INC through cash donations, in-kind support, partnerships, and volunteer contributions to advance justice, accountability, and community empowerment." />
+  <meta name="author" content="EASJ INC" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0a2342;
+      --green: #005a3c;
+      --gold: #c5962b;
+      --blue: #0c7bd9;
+      --text: #17202a;
+      --muted: #5f6f7a;
+      --soft: #f4f8fb;
+      --white: #ffffff;
+      --shadow: 0 18px 40px rgba(10, 35, 66, 0.08);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #f8fafc;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button, input, textarea, select { font: inherit; }
+    .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .site-header {
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid rgba(10,35,66,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(6px);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--green));
+      border: 3px solid var(--gold);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 1.8rem;
+      box-shadow: 0 8px 18px rgba(10,35,66,0.12);
+    }
+    .brand-text h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+    }
+    .brand-text p {
+      margin: 0;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    .nav a {
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.94rem;
+    }
+    .nav a:hover { background: rgba(12,123,217,0.08); }
+    .menu-btn { display: none; }
+    .hero {
+      background: linear-gradient(120deg, rgba(10,35,66,0.97), rgba(0,90,60,0.92), rgba(12,123,217,0.86));
+      color: white;
+      padding: 88px 0 72px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      margin-bottom: 14px;
+    }
+    .hero h2 {
+      margin: 0 0 18px;
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+    .lead {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.84);
+      max-width: 62ch;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.primary {
+      background: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 12px 26px rgba(197,150,43,0.26);
+    }
+    .btn.secondary {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.14);
+      color: white;
+    }
+    .impact-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      color: white;
+    }
+    .card-label {
+      color: var(--gold);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+    .impact-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.8rem;
+    }
+    .impact-card p { color: rgba(255,255,255,0.84); }
+    .small-link { color: #dfeeff; font-weight: 600; }
+    .section { padding: 88px 0; }
+    .section-title {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 42px;
+    }
+    .section-title h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--navy);
+      letter-spacing: -0.04em;
+    }
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .content-block h3,
+    .info-card h3,
+    .feature-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+    .content-block p,
+    .info-card p,
+    .feature-card p,
+    .box-list li {
+      color: var(--muted);
+    }
+    .box-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+    .box-list li {
+      background: #edf7fb;
+      border-left: 4px solid var(--blue);
+      padding: 12px 16px;
+      border-radius: 8px;
+    }
+    .info-card,
+    .feature-card,
+    .donation-form {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+    .callout {
+      background: #fcf5e9;
+      border-left: 4px solid var(--gold);
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-top: 18px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .feature-card { border-top: 4px solid var(--blue); }
+    .icon { font-size: 2rem; margin-bottom: 10px; }
+    .donation-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .donation-form input, .donation-form select, .donation-form textarea {
+      width: 100%;
+      border: 1px solid #dfe8f1;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 15px;
+      margin-bottom: 12px;
+      background: white;
+    }
+    .donation-form textarea { min-height: 120px; resize: vertical; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .consent input { width: auto; margin-top: 3px; }
+    .consent label { margin: 0; font-weight: 400; }
+    .site-footer {
+      background: var(--navy);
+      color: white;
+      padding: 42px 0 18px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 28px;
+      padding-bottom: 18px;
+    }
+    .site-footer h3 {
+      margin: 0 0 14px;
+      color: var(--gold);
+    }
+    .site-footer p, .site-footer a, .site-footer li {
+      color: rgba(255,255,255,0.8);
+    }
+    .site-footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 16px;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.94rem;
+    }
+    .whatsapp-fab {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #25D366;
+      box-shadow: 0 8px 26px rgba(37,211,102,0.22);
+      z-index: 50;
+    }
+    @media (max-width: 980px) {
+      .hero-grid, .two-col, .feature-grid, .footer-grid { grid-template-columns: 1fr; }
+      .nav { display: none; position: absolute; top: 76px; left: 0; right: 0; background: rgba(255,255,255,0.98); border-bottom: 1px solid rgba(10,35,66,0.08); padding: 16px 20px; }
+      .nav.active { display: block; }
+      .nav ul { flex-direction: column; align-items: flex-start; }
+      .menu-btn { display: inline-block; background: var(--navy); border: 0; color: white; padding: 10px 14px; border-radius: 10px; cursor: pointer; }
+      .row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="EASJ INC home">
+        <div class="logo">⚖</div>
+        <div class="brand-text">
+          <h1>EASJ INC</h1>
+          <p>JUSTICE • FAIRNESS • FREEDOM</p>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#pillars">Pillars</a></li>
+          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Support our mission</p>
+          <h2>Give to strengthen justice, accountability, and community well-being.</h2>
+          <p class="lead">Your support helps EASJ INC drive civic accountability, protect human rights, strengthen education systems, and empower communities across Liberia and beyond.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#donate">Donate now</a>
+            <a class="btn secondary" href="https://wa.me/231886442975?text=Hello%20EASJ%20INC%2C%20I%20want%20to%20support%20your%20work" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+          </div>
+        </div>
+
+        <div class="impact-card">
+          <p class="card-label">How your support helps</p>
+          <h3>Every gift advances justice.</h3>
+          <p>Whether in cash, in-kind support, or strategic partnership, your contribution helps us create visible, measurable impact in education, governance, rights protection, and community empowerment.</p>
+          <a class="small-link" href="#donation-types">Learn donation options</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="donation-types">
+      <div class="container">
+        <div class="section-title">
+          <h2>Donation options</h2>
+          <p>We welcome financial support, in-kind giving, and partnership arrangements that help us serve our mission more effectively.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="icon">💰</div>
+            <h3>Cash donations</h3>
+            <p>Support our operations, advocacy, education initiatives, outreach programs, and humanitarian assistance efforts.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon">📦</div>
+            <h3>In-kind support</h3>
+            <p>Contribute books, office supplies, learning materials, equipment, hygiene products, and other practical resources.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon">🤝</div>
+            <h3>Partnerships</h3>
+            <p>Collaborate with us on advocacy, sponsorship, training programs, public education, and strategic outreach.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#f6fbff;">
+      <div class="container two-col">
+        <div class="content-block">
+          <h3>Donation policy</h3>
+          <p>EASJ INC accepts donations in cash, in-kind goods, and strategic support from individuals, groups, and organizations that share our mission of justice, fairness, accountability, and community empowerment.</p>
+          <ul class="box-list">
+            <li>All donations are acknowledged and recorded.</li>
+            <li>In-kind donations are documented with description, quantity, and estimated value.</li>
+            <li>Support can be directed toward general operations, education, advocacy, or community support programs.</li>
+            <li>We exercise care and transparency in handling all donations and support materials.</li>
+          </ul>
+          <div class="callout">We are committed to accountable, respectful, and transparent stewardship of every contribution.</div>
+        </div>
+
+        <aside class="info-card">
+          <h3>Current donation channels</h3>
+          <p><strong>PayPal / PayPal.Me:</strong> available on request through our contact channels.</p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/231886442975?text=Hello%20EASJ%20INC%2C%20I%20would%20like%20to%20support%20your%20work%20through%20a%20donation." target="_blank" rel="noopener noreferrer">+231 88 644 2975</a></p>
+          <p><strong>Email:</strong> <a href="mailto:easjinc2024@gmail.com">easjinc2024@gmail.com</a></p>
+          <p><strong>Bank transfer:</strong> available by direct arrangement with EASJ INC leadership.</p>
+          <p><strong>In-kind support:</strong> we welcome goods, resources, and material assistance based on program needs.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="donate">
+      <div class="container">
+        <div class="section-title">
+          <h2>Support request form</h2>
+          <p>Tell us about your donation or support interest. We will respond with the next steps and the best way to receive your contribution.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="donation-form">
+            <form id="donation-form" method="POST" action="/api/contact">
+              <div class="row">
+                <div>
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" type="text" required />
+                </div>
+                <div>
+                  <label for="email">Email address</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
+              </div>
+
+              <div class="row">
+                <div>
+                  <label for="phone">Phone number</label>
+                  <input id="phone" name="phone" type="tel" />
+                </div>
+                <div>
+                  <label for="donation-type">Donation type</label>
+                  <select id="donation-type" name="topic">
+                    <option value="cash">Cash donation</option>
+                    <option value="in-kind">In-kind donation</option>
+                    <option value="partnership">Partnership/Sponsorship</option>
+                    <option value="volunteer">Volunteer support</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <label for="amount">Amount or item description</label>
+              <input id="amount" name="subject" type="text" placeholder="Example: USD 200, or 20 school books, food supplies, etc." required />
+
+              <label for="message">Message / donation details</label>
+              <textarea id="message" name="message" required placeholder="Tell us about your support plan, preferred donation method, or items you want to contribute."></textarea>
+
+              <div class="consent">
+                <input id="consent" name="consent" type="checkbox" required />
+                <label for="consent">I agree that EASJ INC may use my contact information to acknowledge and process this donation inquiry.</label>
+              </div>
+
+              <input type="hidden" name="website" class="honeypot" />
+              <button class="btn primary" type="submit">Send support request</button>
+            </form>
+          </div>
+
+          <aside class="info-card">
+            <h3>What happens next?</h3>
+            <p>After submitting your form, our team will review your support request and contact you to confirm the best method for receiving your donation or support.</p>
+            <p>For quick arrangements, contact us directly through WhatsApp:</p>
+            <p><a href="https://wa.me/231886442975?text=Hello%20EASJ%20INC%2C%20I%20would%20like%20to%20support%20your%20work." target="_blank" rel="noopener noreferrer">Chat on WhatsApp → +231 88 644 2975</a></p>
+            <div class="callout">We appreciate every act of generosity, whether cash, resources, or time.</div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>EASJ INC</h3>
+        <p>Alliance for Justice • Fairness • Freedom</p>
+        <p><strong>Phone:</strong> <a href="tel:+231886442975">+231 88 644 2975</a> / <a href="tel:+231770442975">+231 77 044 2975</a></p>
+        <p><strong>Email:</strong> <a href="mailto:easjinc2024@gmail.com">easjinc2024@gmail.com</a></p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#pillars">Pillars</a></li>
+          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://wa.me/231886442975" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="https://facebook.com/EASJINC" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="mailto:easjinc2024@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container copyright">© 2026 EASJ INC — All rights reserved.</div>
+  </footer>
+
+  <a class="whatsapp-fab" href="https://wa.me/231886442975?text=Hello%20EASJ%20INC%2C%20I%20would%20like%20to%20support%20your%20work." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .06 5.31.06 11.94c0 2.12.56 4.2 1.62 6.02L0 24l6.25-1.66A11.94 11.94 0 0012 23.88c6.63 0 11.94-5.31 11.94-11.94 0-3.19-1.25-6.19-3.42-8.46z" fill="#25D366"/>
+      <path d="M18.73 15.94c-.2-.1-1.24-.61-1.43-.68-.2-.07-.34-.1-.48.1-.14.2-.54.68-.66.82-.12.14-.25.16-.46.05-.2-.1-.86-.31-1.64-.99-.61-.54-1.02-1.2-1.14-1.4-.12-.2-.01-.31.09-.4l.31-.31c.1-.1.14-.22.22-.35.08-.14.04-.26-.02-.36l-.1-.24c-.06-.15-.46-1.11-.63-1.5-.17-.4-.34-.34-.48-.34h-.4c-.14 0-.36.05-.54.26-.18.2-.7.68-.7 1.66 0 .98.72 1.92.83 2.05.1.14 1.42 2.2 3.44 3.02.48.23.86.37 1.15.48.49.16.93.14 1.28.09.39-.06 1.24-.5 1.41-1 .17-.5.17-.95.12-1.04-.05-.09-.2-.14-.4-.24z" fill="#fff"/>
+    </svg>
+  </a>
+
+  <script>
+    document.getElementById('nav-toggle')?.addEventListener('click', function () {
+      const nav = document.getElementById('primary-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
