@@ -4,846 +4,1410 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>EASJ INC | Alliance for Justice, Fairness and Freedom</title>
-  <meta name="description" content="Education Accountability and Social Justice (EASJ INC) — Alliance for Justice, Fairness and Freedom. Promoting accountability, advancing justice, empowering communities and defending human rights.">
-  <meta name="keywords" content="EASJ INC, Education Accountability, Social Justice, Liberia, Human Rights, Education, Accountability, Justice, Fairness, Freedom">
-  <meta name="author" content="Advocate Amen Saakollie Sheriff">
+
+  <meta name="description" content="Education Accountability and Social Justice (EASJ INC) is a Liberian nonprofit advocacy organization promoting accountability, advancing justice, empowering communities, and strengthening institutions.">
+
+  <meta name="theme-color" content="#0A2342">
+  <meta name="author" content="Education Accountability and Social Justice (EASJ INC)">
+  <meta name="robots" content="index, follow">
 
   <style>
     :root {
-      --navy: #0a2342;
-      --green: #005a3c;
-      --gold: #c5962b;
-      --blue: #0c7bd9;
-      --text: #17202a;
-      --muted: #5f6f7a;
-      --soft: #f4f8fb;
-      --white: #ffffff;
-      --shadow: 0 18px 40px rgba(10, 35, 66, 0.08);
-      --radius: 18px;
+      --navy: #0A2342;
+      --green: #005A3C;
+      --gold: #C5962B;
+      --blue: #1769AA;
+      --white: #FFFFFF;
+      --light: #F4F7FA;
+      --text: #263445;
+      --border: #DFE6ED;
+      --pale-gold: #FFF9EA;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
 
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f7fafc;
-      color: var(--text);
       line-height: 1.7;
+      color: var(--text);
+      background: var(--white);
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    button, input, textarea { font: inherit; }
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    img {
+      max-width: 100%;
+    }
 
     .container {
-      width: min(1200px, calc(100% - 32px));
+      width: min(1150px, 100%);
       margin: 0 auto;
     }
 
     .skip-link {
       position: absolute;
       left: -9999px;
-      top: auto;
-    }
-
-    .skip-link:focus {
-      left: 14px;
-      top: 14px;
-      background: var(--navy);
-      color: white;
-      padding: 10px 14px;
+      top: 0;
+      background: var(--white);
+      color: var(--navy);
+      padding: 12px;
       z-index: 1000;
     }
 
-    .site-header {
+    .skip-link:focus {
+      left: 10px;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 15px 5%;
+      border-bottom: 4px solid var(--gold);
       position: sticky;
       top: 0;
-      z-index: 30;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(10,35,66,0.08);
+      z-index: 100;
     }
 
     .header-inner {
+      max-width: 1250px;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 80px;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+      min-width: 0;
     }
 
     .logo {
       width: 62px;
       height: 62px;
-      flex-shrink: 0;
-      border-radius: 50%;
       border: 3px solid var(--gold);
-      background: linear-gradient(135deg, var(--navy), var(--green));
-      position: relative;
-      box-shadow: 0 8px 20px rgba(10,35,66,0.15);
-    }
-
-    .logo::before {
-      content: "⚖";
-      position: absolute;
-      inset: 0;
+      border-radius: 50%;
       display: grid;
       place-items: center;
-      color: white;
-      font-size: 28px;
+      color: var(--gold);
+      font-size: 17px;
+      font-weight: bold;
+      flex-shrink: 0;
+      letter-spacing: 1px;
     }
 
-    .brand-text h1 {
-      margin: 0;
-      font-size: 1.25rem;
-      color: var(--navy);
-      letter-spacing: 0.04em;
+    .brand h1 {
+      font-size: 21px;
+      line-height: 1.3;
     }
 
-    .brand-text p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
+    .brand p {
+      font-size: 11px;
+      color: #F3D58D;
     }
 
-    .nav ul {
+    nav {
       display: flex;
+      flex-wrap: wrap;
+      gap: 8px 15px;
       align-items: center;
-      list-style: none;
-      gap: 10px;
-      margin: 0;
-      padding: 0;
     }
 
-    .nav a {
-      display: inline-block;
-      padding: 10px 12px;
-      border-radius: 10px;
-      color: var(--navy);
-      font-size: 0.93rem;
-      font-weight: 600;
-      transition: 0.2s ease;
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
     }
 
-    .nav a:hover, .nav a:focus-visible {
-      background: var(--blue);
-      color: white;
-    }
-
-    .menu-btn {
-      display: none;
-      border: 0;
-      background: var(--navy);
-      color: white;
-      border-radius: 10px;
-      padding: 10px 14px;
-      font-weight: 600;
-      cursor: pointer;
+    nav a:hover {
+      color: #F3D58D;
     }
 
     .hero {
-      background: linear-gradient(120deg, rgba(10,35,66,0.96), rgba(0,90,60,0.92), rgba(12,123,217,0.88));
-      color: white;
-      padding: 96px 0 88px;
+      background: linear-gradient(130deg, var(--navy), var(--green));
+      color: var(--white);
+      padding: 85px 6%;
+      text-align: center;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.45fr 0.85fr;
-      gap: 36px;
-      align-items: center;
+    .hero-inner {
+      max-width: 960px;
+      margin: auto;
     }
 
     .eyebrow {
-      display: inline-block;
-      color: var(--gold);
-      font-size: 0.78rem;
+      color: #F3D58D;
+      font-weight: bold;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 700;
-      margin-bottom: 14px;
+      letter-spacing: 2px;
+      font-size: 13px;
     }
 
     .hero h2 {
-      margin: 0 0 18px;
-      font-size: clamp(2.2rem, 4vw, 4rem);
-      line-height: 1.08;
-      letter-spacing: -0.04em;
+      font-size: clamp(30px, 5vw, 49px);
+      line-height: 1.2;
+      margin: 18px 0;
     }
 
-    .lead {
-      max-width: 60ch;
-      color: rgba(255,255,255,0.86);
-      font-size: 1.08rem;
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 22px;
+      font-size: 17px;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
+    .motto {
+      color: #F3D58D;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 18px;
-      border-radius: 12px;
-      font-weight: 700;
-      border: 1px solid transparent;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 12px 20px;
+      border: 2px solid var(--gold);
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 5px;
       cursor: pointer;
     }
 
-    .btn:hover, .btn:focus-visible {
-      transform: translateY(-1px);
+    .btn:hover {
+      background: #E3B84E;
+      border-color: #E3B84E;
     }
 
-    .btn.primary {
-      background: var(--gold);
+    .btn-outline {
+      background: transparent;
+      border-color: var(--white);
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
       color: var(--navy);
-      box-shadow: 0 12px 26px rgba(197,150,43,0.28);
+      border-color: var(--white);
     }
 
-    .btn.secondary {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.15);
-      color: white;
+    section {
+      padding: 65px 6%;
+      scroll-margin-top: 100px;
     }
 
-    .trust-list {
-      list-style: none;
-      padding: 0;
-      margin: 26px 0 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      color: rgba(255,255,255,0.9);
-      font-size: 0.9rem;
+    .soft-bg {
+      background: var(--light);
     }
 
-    .trust-list li {
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .impact-card {
-      width: min(100%, 380px);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: white;
-      padding: 28px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .card-label {
-      display: inline-block;
-      color: var(--gold);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin: 0 0 12px;
-      font-size: 0.72rem;
-    }
-
-    .impact-card h3 {
-      margin: 0 0 12px;
-      font-size: 1.8rem;
-    }
-
-    .impact-card p { color: rgba(255,255,255,0.85); }
-
-    .small-link {
-      display: inline-block;
-      margin-top: 8px;
-      color: #dfeeff;
-      font-weight: 600;
-    }
-
-    .section { padding: 88px 0; }
-
-    .section-title {
+    .section-heading {
       text-align: center;
-      max-width: 760px;
-      margin: 0 auto 40px;
+      margin-bottom: 35px;
     }
 
-    .section-title h2 {
-      margin: 0 0 12px;
-      font-size: clamp(2.1rem, 4vw, 3rem);
-      letter-spacing: -0.04em;
+    .section-heading h2 {
       color: var(--navy);
+      font-size: clamp(26px, 4vw, 35px);
+      line-height: 1.3;
+      margin-bottom: 10px;
     }
 
-    .section-title p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.02rem;
+    .section-heading p {
+      max-width: 790px;
+      margin: auto;
     }
 
-    .two-col {
+    .gold-line {
+      width: 75px;
+      height: 4px;
+      background: var(--gold);
+      margin: 14px auto;
+    }
+
+    .about-grid,
+    .founder-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 28px;
       align-items: start;
     }
 
-    .content-block h3,
-    .info-card h3,
-    .feature-card h3 {
-      margin-top: 0;
-      color: var(--navy);
-    }
-
-    .content-block p,
-    .info-card p,
-    .feature-card p {
-      color: var(--muted);
-    }
-
-    .highlight-box {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      background: #edf7fb;
-      border-left: 5px solid var(--blue);
-      padding: 18px 20px;
-      border-radius: 12px;
-      margin-top: 20px;
-      color: var(--navy);
-    }
-
-    .info-card,
-    .feature-card,
-    .contact-form {
-      background: white;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 24px;
-    }
-
-    .signature {
-      background: #faf5ea;
+    .panel {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 9px;
       border-left: 4px solid var(--gold);
-      padding: 14px 16px;
-      border-radius: 8px;
-      margin-top: 18px;
-      color: var(--navy);
-      font-weight: 600;
     }
 
-    .bg-light { background: var(--soft); }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .feature-card { border-top: 4px solid var(--blue); }
-
-    .icon {
-      font-size: 2rem;
+    .panel h3 {
+      color: var(--green);
       margin-bottom: 10px;
     }
 
-    .partners-grid {
+    .pillars-grid,
+    .program-grid,
+    .values-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
 
-    .partner-box {
-      min-height: 120px;
-      display: grid;
+    .pillar,
+    .program,
+    .value-card {
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: var(--white);
+      box-shadow: 0 3px 12px rgba(10, 35, 66, 0.05);
+      height: 100%;
+    }
+
+    .pillar-number {
+      display: inline-grid;
       place-items: center;
-      background: white;
-      border-radius: 16px;
-      color: var(--muted);
-      border: 1px solid #e7edf3;
-      box-shadow: 0 12px 22px rgba(10,35,66,0.04);
+      width: 42px;
+      height: 42px;
+      background: var(--navy);
+      color: var(--gold);
+      border-radius: 50%;
+      font-weight: bold;
+      margin-bottom: 12px;
     }
 
-    .contact-section {
-      background: linear-gradient(180deg, #f7fbfd 0%, #ffffff 100%);
-    }
-
-    /* Contact links: clearly visible and clickable */
-    .contact-details a,
-    .contact-details a:visited {
+    .pillar h3,
+    .program h3,
+    .value-card h3 {
       color: var(--green);
-      text-decoration: underline;
+      margin-bottom: 9px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    .founder-title {
+      color: var(--green);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .founder-mark {
+      background: var(--navy);
+      color: var(--white);
+      padding: 28px;
+      border-radius: 9px;
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .founder-mark h3 {
+      color: #F3D58D;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .list {
+      padding-left: 22px;
+    }
+
+    .list li {
+      margin: 8px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .contact-card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 9px;
+      border-top: 4px solid var(--gold);
       overflow-wrap: anywhere;
     }
 
-    .contact-details a:hover,
-    .contact-details a:focus-visible {
+    .contact-card h3 {
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+
+    .contact-card a:not(.btn):not(.call-link) {
       color: var(--blue);
     }
 
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    .phone-list {
+      list-style: none;
     }
 
-    .contact-form label {
-      font-weight: 600;
-      color: var(--navy);
+    .phone-list li {
+      margin: 14px 0;
     }
 
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      border: 1px solid #dbe4ef;
-      border-radius: 10px;
-      padding: 12px 14px;
-      background: white;
-      color: var(--text);
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: 2px solid rgba(12,123,217,0.2);
-      border-color: var(--blue);
-    }
-
-    .site-footer {
-      background: var(--navy);
-      color: white;
-      padding: 36px 0 16px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 28px;
-      padding-bottom: 18px;
-    }
-
-    .site-footer h3 {
-      color: var(--gold);
-      margin: 0 0 12px;
-    }
-
-    .site-footer p,
-    .site-footer li,
-    .site-footer a {
-      color: rgba(255,255,255,0.88);
-    }
-
-    /* Explicitly keep both phone numbers visible on the dark footer */
-    .site-footer .footer-phone,
-    .site-footer .footer-phone strong,
-    .site-footer .footer-phone a,
-    .site-footer .footer-phone a:visited {
-      color: #ffffff !important;
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .site-footer .footer-phone a {
+    .call-link {
       display: inline-block;
-      text-decoration: underline;
+      background: var(--green);
+      color: var(--white) !important;
+      padding: 7px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 6px;
+      font-weight: bold;
+    }
+
+    .call-link:hover {
+      background: var(--navy);
+    }
+
+    .contact-note {
+      margin-top: 20px;
+      padding: 15px;
+      border-left: 4px solid var(--gold);
+      background: var(--pale-gold);
+    }
+
+    .info-banner {
+      margin-top: 25px;
+      padding: 20px;
+      background: var(--pale-gold);
+      border-left: 4px solid var(--gold);
+      border-radius: 5px;
+    }
+
+    .info-banner h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .small-note {
+      font-size: 13px;
+      color: #526171;
+      margin-top: 12px;
+    }
+
+    .resource-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .resource-card {
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: var(--white);
+    }
+
+    .resource-card h3 {
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .resource-card p {
+      margin-bottom: 8px;
+    }
+
+    .resource-label {
+      display: inline-block;
+      color: var(--navy);
+      background: #E8EEF5;
+      padding: 4px 9px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 32px 6%;
+      border-top: 5px solid var(--gold);
+    }
+
+    footer p {
+      margin: 7px 0;
+    }
+
+    footer a {
+      color: #F3D58D;
       overflow-wrap: anywhere;
     }
 
-    .site-footer .footer-phone a:hover,
-    .site-footer .footer-phone a:focus-visible {
-      color: #f2cc70 !important;
+    .footer-motto {
+      color: #F3D58D;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
-    .site-footer ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 8px;
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin: 18px 0;
     }
 
-    .copyright {
-      border-top: 1px solid rgba(255,255,255,0.12);
-      padding-top: 18px;
-      color: rgba(255,255,255,0.72);
-      font-size: 0.95rem;
+    .footer-nav a {
+      text-decoration: none;
     }
 
-    @media (max-width: 980px) {
-      .hero-grid,
-      .two-col,
-      .grid-3 {
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 950px) {
+      .header-inner {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .pillars-grid,
+      .program-grid,
+      .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      html {
+        scroll-padding-top: 140px;
+      }
+
+      header {
+        position: relative;
+        padding: 14px 4%;
+      }
+
+      .header-inner {
+        justify-content: center;
+      }
+
+      .brand {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .brand h1 {
+        font-size: 18px;
+      }
+
+      nav {
+        gap: 9px 13px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .about-grid,
+      .founder-grid,
+      .contact-grid,
+      .resource-list {
         grid-template-columns: 1fr;
       }
 
-      .partners-grid { grid-template-columns: repeat(2, 1fr); }
-
-      .nav {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background: rgba(255,255,255,0.98);
-        border-bottom: 1px solid rgba(10,35,66,0.08);
-        padding: 18px 16px;
+      .pillars-grid,
+      .program-grid,
+      .values-grid {
+        grid-template-columns: 1fr;
       }
 
-      .nav.active { display: block; }
-      .nav ul { flex-direction: column; align-items: flex-start; }
-      .menu-btn { display: inline-block; }
+      .hero {
+        padding: 55px 5%;
+      }
+
+      section {
+        padding: 45px 5%;
+        scroll-margin-top: 15px;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .panel,
+      .pillar,
+      .program,
+      .value-card,
+      .contact-card,
+      .resource-card {
+        padding: 20px;
+      }
     }
 
-    @media (max-width: 600px) {
-      .hero { padding-top: 72px; }
-      .header-inner { min-height: 72px; }
-      .brand-text p { letter-spacing: 0.04em; font-size: 0.65rem; }
-      .hero-actions { flex-direction: column; align-items: stretch; }
-      .btn { width: 100%; }
-      .partners-grid, .footer-grid { grid-template-columns: 1fr; }
-      .site-footer .footer-phone a { font-size: 16px; }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
     }
   </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="EASJ INC home">
-        <div class="logo" aria-hidden="true"></div>
-        <div class="brand-text">
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo" role="img" aria-label="EASJ INC emblem">EASJ</div>
+        <div>
           <h1>EASJ INC</h1>
-          <p>ALLIANCE FOR JUSTICE • FAIRNESS • FREEDOM</p>
+          <p>Alliance for Justice, Fairness and Freedom</p>
         </div>
-      </a>
+      </div>
 
-      <button id="nav-toggle" class="menu-btn" type="button"
-        aria-expanded="false" aria-controls="primary-nav">Menu</button>
-
-      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#pillars">Pillars</a></li>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#partners">Partners</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#founder">Founder</a>
+        <a href="#pillars">Advocacy Pillars</a>
+        <a href="#programs">Programs</a>
+        <a href="#projects">Projects</a>
+        <a href="#public-record">Public Record</a>
+        <a href="#publications">Publications</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Alliance for Justice • Fairness • Freedom</p>
-          <h2>Advancing accountability, protecting rights, and empowering communities.</h2>
-          <p class="lead">Education Accountability and Social Justice (EASJ INC) is a Liberian civic and social justice organization committed to strengthening institutions, advancing human rights, and creating a more just and accountable future.</p>
+  <main id="main-content">
 
-          <div class="hero-actions">
-            <a class="btn primary" href="#contact">Support Our Work</a>
-            <a class="btn secondary" href="#programs">Explore Programs</a>
-          </div>
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <p class="eyebrow">Education Accountability and Social Justice</p>
 
-          <ul class="trust-list" aria-label="Key values">
-            <li>Evidence-led advocacy</li>
-            <li>Community-focused action</li>
-            <li>Transparent accountability</li>
-          </ul>
-        </div>
-
-        <div class="hero-panel">
-          <div class="impact-card">
-            <p class="card-label">Impact Focus</p>
-            <h3>Justice. Accountability. Equity.</h3>
-            <p>We champion institutional integrity, civic education, and community empowerment for sustainable social change.</p>
-            <a href="#about" class="small-link">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>About EASJ INC</h2>
-          <p>A dynamic platform for public accountability, justice, fairness, freedom, and responsible citizenship.</p>
-        </div>
-
-        <div class="two-col">
-          <div class="content-block">
-            <h3>Who We Are</h3>
-            <p><strong>Education Accountability and Social Justice (EASJ INC)</strong> is a civic organization committed to advancing justice, empowering communities, and strengthening institutions in Liberia and beyond.</p>
-            <p>We work to ensure that education, governance, and human rights systems are accountable, inclusive, and responsive to the people they serve.</p>
-
-            <div class="highlight-box">
-              <strong>Our Motto:</strong>
-              <span>Justice • Fairness • Freedom</span>
-            </div>
-          </div>
-
-          <aside class="info-card">
-            <h3>Founder</h3>
-            <p><strong>Advocate Amen Saakollie Sheriff</strong><br>Founder, CEO &amp; Executive Director</p>
-            <div class="signature">Leadership for accountability, justice, and community transformation.</div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="pillars" class="section bg-light">
-      <div class="container">
-        <div class="section-title">
-          <h2>Our Advocacy Pillars</h2>
-          <p>We focus on the issues that define human dignity, public trust, and long-term community welfare.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="feature-card">
-            <div class="icon">⚖️</div>
-            <h3>Justice &amp; Rule of Law</h3>
-            <p>Promoting equal access to justice, due process, and institutional integrity.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">🏛️</div>
-            <h3>Good Governance</h3>
-            <p>Strengthening accountability, ethics, and responsive public leadership.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">📚</div>
-            <h3>Education Accountability</h3>
-            <p>Advancing access to quality education and responsible governance of learning systems.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">🧑‍⚖️</div>
-            <h3>Human Rights</h3>
-            <p>Defending dignity, equality, and protection for vulnerable populations.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">👥</div>
-            <h3>Community Empowerment</h3>
-            <p>Building resilient communities through participation and civic ownership.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon">🌍</div>
-            <h3>Environmental Security</h3>
-            <p>Advocating for responsible resource governance and community protection.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="programs" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Programs &amp; Areas of Engagement</h2>
-          <p>EASJ INC uses advocacy, public education, research, and community engagement to advance positive social change.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="feature-card">
-            <h3>Project Justice</h3>
-            <p>Public-interest advocacy focused on institutional accountability and civic rights.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Civic Education</h3>
-            <p>Promoting democratic participation, public awareness, and responsible citizenship.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Education Initiatives</h3>
-            <p>Advancing quality learning outcomes and equitable educational access.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Anti-Corruption Advocacy</h3>
-            <p>Raising awareness of abuse of power, public resource misuse, and institutional failures.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Human Rights Advocacy</h3>
-            <p>Supporting awareness and action against discrimination and abuses of fundamental rights.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Community Development</h3>
-            <p>Encouraging inclusive development, youth empowerment, and collective progress.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="partners" class="section bg-light">
-      <div class="container">
-        <div class="section-title">
-          <h2>Global Partnerships</h2>
-          <p>We collaborate with civic, academic, and community partners to scale our work and drive sustainable impact.</p>
-        </div>
-
-        <div class="partners-grid" aria-label="Partner logos placeholder section">
-          <div class="partner-box">Partner Logo</div>
-          <div class="partner-box">Partner Logo</div>
-          <div class="partner-box">Partner Logo</div>
-          <div class="partner-box">Partner Logo</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Contact &amp; Connect</h2>
-          <p>Let’s work together for justice, accountability, and social transformation.</p>
-        </div>
-
-        <div class="two-col contact-grid">
-          <div class="info-card contact-details">
-            <h3>Get in touch</h3>
-
-            <p><strong>Email:</strong>
-              <a href="mailto:easjinc2024@gmail.com">easjinc2024@gmail.com</a>
-            </p>
-
-            <p><strong>GitHub:</strong>
-              <a href="https://github.com/easjinc2024-ctrl" target="_blank" rel="noopener noreferrer">easjinc2024-ctrl</a>
-            </p>
-
-            <p><strong>Phone 1:</strong>
-              <a href="tel:+231886442975">+231 886 442 975</a>
-            </p>
-
-            <p><strong>Phone 2:</strong>
-              <a href="tel:+231770442975">+231 770 442 975</a>
-            </p>
-
-            <p><strong>Location:</strong> Liberia</p>
-            <p><strong>Focus:</strong> Accountability, Education, Human Rights, Justice</p>
-          </div>
-
-          <form id="contact-form" class="contact-form" novalidate>
-            <label for="name">Full name</label>
-            <input id="name" name="name" type="text" required>
-
-            <label for="email">Email address</label>
-            <input id="email" name="email" type="email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button class="btn primary" type="submit">Send message</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-
-      <!-- Organization and contact information -->
-      <div>
-        <h3>EASJ INC</h3>
-        <p>Alliance for Justice • Fairness • Freedom</p>
-
-        <p class="footer-phone">
-          <strong>Phone 1:</strong>
-          <a href="tel:+231886442975">+231 886 442 975</a>
-        </p>
-
-        <p class="footer-phone">
-          <strong>Phone 2:</strong>
-          <a href="tel:+231770442975">+231 770 442 975</a>
-        </p>
+        <h2>Promoting Accountability. Advancing Justice. Empowering Communities.</h2>
 
         <p>
-          <strong>Email:</strong>
-          <a href="mailto:easjinc2024@gmail.com">easjinc2024@gmail.com</a>
+          EASJ INC is a Liberian nonprofit advocacy organization committed
+          to promoting transparency, strengthening public institutions,
+          defending human dignity, and empowering communities through
+          education, civic engagement, and social justice advocacy.
+        </p>
+
+        <p class="motto">JUSTICE &bull; FAIRNESS &bull; FREEDOM</p>
+
+        <a class="btn" href="#about">Learn About EASJ INC</a>
+        <a class="btn btn-outline" href="#pillars">Explore Our Advocacy</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About EASJ INC</h2>
+          <div class="gold-line"></div>
+          <p>
+            Accountability, equal opportunity, institutional integrity,
+            and social justice for all.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <h3>Who We Are</h3>
+            <p>
+              Education Accountability and Social Justice (EASJ INC) is a
+              Liberian nonprofit advocacy organization established on
+              January 8, 2024. Its organizational mission is to promote
+              accountability, advance justice, empower communities, and
+              strengthen institutions.
+            </p>
+            <br>
+            <p>
+              Through public education, research, civic participation,
+              community engagement, and responsible advocacy, EASJ INC
+              seeks to contribute to a fairer, more transparent, inclusive,
+              and accountable society.
+            </p>
+            <br>
+            <p>
+              The organization promotes peaceful civic action, respect
+              for human rights, ethical leadership, and meaningful
+              participation in decisions affecting communities.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>Our Mission</h3>
+            <p>
+              To advance education accountability and social justice by
+              promoting transparency, defending human rights, empowering
+              citizens, and encouraging responsible leadership and
+              effective public institutions.
+            </p>
+            <br>
+            <h3>Our Vision</h3>
+            <p>
+              A Liberia where justice, fairness, freedom, quality education,
+              human dignity, and accountable governance are respected
+              and accessible to everyone.
+            </p>
+            <br>
+            <h3>Our Tagline</h3>
+            <p>
+              Promoting Accountability, Advancing Justice, Empowering
+              Communities, and Strengthening Institutions.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-banner">
+          <h3>Our Organizational Commitment</h3>
+          <p>
+            EASJ INC seeks to serve the public interest through
+            constructive engagement, responsible reporting,
+            community education, and evidence-informed advocacy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 ADVOCACY PILLARS -->
+    <section class="soft-bg" id="pillars">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our 12 Advocacy Pillars</h2>
+          <div class="gold-line"></div>
+          <p>
+            Twelve interconnected priorities guide our commitment to
+            responsible governance, social justice, and community empowerment.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+
+          <article class="pillar">
+            <span class="pillar-number">01</span>
+            <h3>Education Accountability</h3>
+            <p>
+              Promoting quality education, transparent school governance,
+              responsible education financing, teacher accountability,
+              and equal learning opportunities.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">02</span>
+            <h3>Transparency and Anti-Corruption</h3>
+            <p>
+              Advocating integrity, openness, responsible public spending,
+              access to public information, and measures to prevent
+              corruption, bribery, and abuse of public office.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">03</span>
+            <h3>Human Rights and Dignity</h3>
+            <p>
+              Defending fundamental rights, human dignity, equality
+              before the law, freedom, and respect for every person.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">04</span>
+            <h3>Rule of Law and Justice</h3>
+            <p>
+              Supporting fair legal processes, equal protection,
+              access to justice, due process, and accountable institutions.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">05</span>
+            <h3>Gender Equality and SGBV Prevention</h3>
+            <p>
+              Promoting gender equality and advocating prevention of
+              sexual and gender-based violence, exploitation,
+              discrimination, and abuse.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">06</span>
+            <h3>Child Protection and Welfare</h3>
+            <p>
+              Advocating children's safety, protection from abuse,
+              access to education, child welfare, and respect for
+              children's rights.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">07</span>
+            <h3>Youth Empowerment and Leadership</h3>
+            <p>
+              Encouraging youth leadership, civic responsibility,
+              skills development, meaningful participation,
+              and opportunities for young people.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">08</span>
+            <h3>Disability Inclusion and Social Protection</h3>
+            <p>
+              Promoting accessibility, equal participation, inclusion
+              of persons with disabilities, social protection,
+              and dignity for vulnerable groups.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">09</span>
+            <h3>Democracy and Civic Education</h3>
+            <p>
+              Advancing civic and voter education, informed citizenship,
+              peaceful democratic participation, and public accountability.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">10</span>
+            <h3>Environmental Justice</h3>
+            <p>
+              Promoting environmental responsibility, community protection,
+              sustainable development, and accountability for environmental harm.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">11</span>
+            <h3>Public Health and Community Welfare</h3>
+            <p>
+              Supporting public awareness, community well-being,
+              access to essential services, and the protection
+              of vulnerable people.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <span class="pillar-number">12</span>
+            <h3>Anti-Bullying, Peace and Social Cohesion</h3>
+            <p>
+              Promoting respect, peaceful coexistence, anti-bullying
+              awareness, conflict prevention, and community solidarity.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section id="founder">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Office of the Founder and Executive Director</h2>
+          <div class="gold-line"></div>
+          <p>Leadership, accountability, and service to the public interest.</p>
+        </div>
+
+        <div class="founder-grid">
+          <div>
+            <p class="founder-title">Advocate Amen Saakollie Sheriff</p>
+
+            <h3>Founder, CEO &amp; Executive Director</h3>
+            <br>
+
+            <p>
+              Advocate Amen Saakollie Sheriff founded EASJ INC to advance
+              education accountability, social justice, civic awareness,
+              and responsible governance in Liberia.
+            </p>
+            <br>
+
+            <p>
+              The Office of the Founder and Executive Director provides
+              organizational leadership and promotes the organization's
+              mission, advocacy priorities, public engagement,
+              partnerships, and institutional development.
+            </p>
+            <br>
+
+            <p>
+              Through constructive public engagement and responsible
+              advocacy, the organization seeks to strengthen civic
+              participation and encourage institutions to act with
+              integrity and accountability.
+            </p>
+          </div>
+
+          <div class="founder-mark">
+            <h3>Leadership with Purpose</h3>
+            <p>
+              Our commitment is to fairness, freedom, public accountability,
+              community empowerment, and respect for human dignity.
+            </p>
+            <br>
+            <p>
+              EASJ INC seeks to advance these values through constructive
+              engagement, evidence-informed advocacy, public education,
+              and peaceful civic action.
+            </p>
+            <br>
+            <p class="footer-motto">
+              Justice &bull; Fairness &bull; Freedom
+            </p>
+            <br>
+            <a class="btn" href="#contact">Contact the Organization</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section class="soft-bg" id="programs">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Programs and Areas of Work</h2>
+          <div class="gold-line"></div>
+          <p>
+            Our program areas reflect the organization's advocacy mission.
+            Activities and projects are subject to available resources
+            and organizational implementation.
+          </p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program">
+            <h3>Education and Research</h3>
+            <p>
+              Education policy awareness, school accountability,
+              public education research, and community learning initiatives.
+            </p>
+          </article>
+
+          <article class="program">
+            <h3>Civic and Voter Education</h3>
+            <p>
+              Citizen awareness, democratic participation, civic responsibility,
+              and public understanding of governance.
+            </p>
+          </article>
+
+          <article class="program">
+            <h3>Public Accountability</h3>
+            <p>
+              Responsible monitoring, evidence-based reporting,
+              transparency advocacy, and institutional accountability.
+            </p>
+          </article>
+
+          <article class="program">
+            <h3>Human Rights Advocacy</h3>
+            <p>
+              Rights awareness, access to justice, protection from abuse,
+              and promotion of human dignity.
+            </p>
+          </article>
+
+          <article class="program">
+            <h3>Community Empowerment</h3>
+            <p>
+              Community dialogue, inclusive participation, youth leadership,
+              and support for vulnerable groups.
+            </p>
+          </article>
+
+          <article class="program">
+            <h3>Environmental Awareness</h3>
+            <p>
+              Environmental justice education, sustainable practices,
+              and community awareness of environmental responsibilities.
+            </p>
+          </article>
+
+          <article class="program">
+            <h3>Child Protection and School Safety</h3>
+            <p>
+              Public education on children's rights, prevention of abuse,
+              safe learning environments, and anti-bullying awareness.
+            </p>
+          </article>
+
+          <article class="program">
+            <h3>Gender Equality and Inclusion</h3>
+            <p>
+              Awareness of equality, inclusion, disability rights,
+              and prevention of sexual and gender-based violence.
+            </p>
+          </article>
+
+          <article class="program">
+            <h3>Governance and Leadership</h3>
+            <p>
+              Public awareness of ethical leadership, citizen participation,
+              responsible administration, and institutional performance.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Projects and Initiatives</h2>
+          <div class="gold-line"></div>
+          <p>
+            A dedicated space for EASJ INC projects, community initiatives,
+            advocacy campaigns, and future development activities.
+          </p>
+        </div>
+
+        <div class="resource-list">
+          <article class="resource-card">
+            <span class="resource-label">Education</span>
+            <h3>Education Accountability Initiatives</h3>
+            <p>
+              Promoting public awareness of education governance,
+              school accountability, access to quality education,
+              and responsible education financing.
+            </p>
+          </article>
+
+          <article class="resource-card">
+            <span class="resource-label">Governance</span>
+            <h3>Transparency and Public Accountability</h3>
+            <p>
+              Encouraging informed public discussion, responsible
+              monitoring, transparency, and institutional integrity.
+            </p>
+          </article>
+
+          <article class="resource-card">
+            <span class="resource-label">Community</span>
+            <h3>Civic Awareness and Community Empowerment</h3>
+            <p>
+              Supporting civic education, peaceful participation,
+              community dialogue, and inclusive citizenship.
+            </p>
+          </article>
+
+          <article class="resource-card">
+            <span class="resource-label">Human Dignity</span>
+            <h3>Rights Protection and Social Justice</h3>
+            <p>
+              Promoting awareness of human rights, child protection,
+              gender equality, disability inclusion, and access to justice.
+            </p>
+          </article>
+        </div>
+
+        <div class="info-banner">
+          <strong>Project information:</strong>
+          The initiatives above describe EASJ INC's areas of focus.
+          They should not be interpreted as confirmation that a particular
+          project has received funding or has been completed.
+          Official project updates may be published here as information
+          becomes available.
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLIC RECORD -->
+    <section class="soft-bg" id="public-record">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Public Record, Reports and News</h2>
+          <div class="gold-line"></div>
+          <p>
+            A space for organizational statements, public-interest
+            commentary, research, announcements, and accountability reports.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Public Information and Accountability</h3>
+          <p>
+            EASJ INC is committed to responsible public communication.
+            Statements and reports should distinguish verified facts,
+            allegations, opinions, and matters requiring further investigation.
+          </p>
+          <br>
+          <p>
+            Official publications and supporting documents can be added
+            to this section as they become available.
+          </p>
+          <br>
+          <p>
+            <strong>Publication principle:</strong>
+            Accuracy, fairness, transparency, and respect for due process.
+          </p>
+          <br>
+          <a class="btn" href="mailto:easjinc2024@gmail.com?subject=Public%20Record%20Inquiry">
+            Request Public Information
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Publications and Downloads</h2>
+          <div class="gold-line"></div>
+          <p>
+            A designated area for EASJ INC reports, policy briefs,
+            research documents, official statements, and educational resources.
+          </p>
+        </div>
+
+        <div class="resource-list">
+          <article class="resource-card">
+            <h3>Official Statements</h3>
+            <p>
+              Public statements, organizational positions, and
+              announcements issued by EASJ INC.
+            </p>
+          </article>
+
+          <article class="resource-card">
+            <h3>Research and Reports</h3>
+            <p>
+              Research findings, accountability reports, policy analysis,
+              and public-interest documentation.
+            </p>
+          </article>
+
+          <article class="resource-card">
+            <h3>Education Resources</h3>
+            <p>
+              Civic education materials, education accountability
+              resources, and community learning documents.
+            </p>
+          </article>
+
+          <article class="resource-card">
+            <h3>Organizational Documents</h3>
+            <p>
+              Approved organizational publications and other documents
+              authorized for public access.
+            </p>
+          </article>
+        </div>
+
+        <p class="small-note">
+          No document is represented as available for download until its
+          actual publication file or working link has been added.
         </p>
       </div>
+    </section>
 
-      <!-- Website navigation -->
-      <div>
-        <h3>Explore</h3>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#pillars">Pillars</a></li>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#partners">Partners</a></li>
-        </ul>
+    <!-- PARTNERS -->
+    <section class="soft-bg" id="partners">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Partnerships and Collaboration</h2>
+          <div class="gold-line"></div>
+          <p>
+            Working toward accountability, justice, inclusion,
+            and stronger communities.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <h3>Who Can Collaborate With Us?</h3>
+            <p>
+              EASJ INC welcomes constructive engagement with civil society
+              organizations, educators, researchers, community leaders,
+              youth groups, development partners, and other stakeholders
+              whose objectives are consistent with its mission.
+            </p>
+            <br>
+            <p>
+              Collaboration may include public education, research,
+              community dialogue, institutional accountability,
+              human rights awareness, and social justice advocacy.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>Partnership Principles</h3>
+            <ul class="list">
+              <li>Mutual respect and shared objectives</li>
+              <li>Transparency and accountability</li>
+              <li>Inclusion and equal participation</li>
+              <li>Ethical conduct and responsible communication</li>
+              <li>Respect for independence and applicable laws</li>
+            </ul>
+            <br>
+            <a class="btn" href="mailto:easjinc2024@gmail.com?subject=EASJ%20INC%20Partnership%20Inquiry">
+              Propose a Partnership
+            </a>
+          </div>
+        </div>
+
+        <p class="small-note">
+          No institution is represented as an official partner unless
+          the relationship has been confirmed and is authorized for publication.
+        </p>
       </div>
+    </section>
 
-      <!-- Organization links -->
-      <div>
-        <h3>Connect</h3>
-        <ul>
-          <li><a href="mailto:easjinc2024@gmail.com">Email EASJ INC</a></li>
-          <li><a href="https://github.com/easjinc2024-ctrl" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
+    <!-- CORE VALUES -->
+    <section id="values">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our Core Values</h2>
+          <div class="gold-line"></div>
+          <p>
+            The principles that guide our advocacy, organizational conduct,
+            and engagement with communities.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card">
+            <h3>Justice</h3>
+            <p>Fair treatment, equal protection, and access to justice.</p>
+          </article>
+
+          <article class="value-card">
+            <h3>Fairness</h3>
+            <p>Impartiality, inclusion, equity, and equal opportunity.</p>
+          </article>
+
+          <article class="value-card">
+            <h3>Freedom</h3>
+            <p>Human dignity, responsible citizenship, and fundamental freedoms.</p>
+          </article>
+
+          <article class="value-card">
+            <h3>Integrity</h3>
+            <p>Honesty, ethical conduct, and responsible public engagement.</p>
+          </article>
+
+          <article class="value-card">
+            <h3>Accountability</h3>
+            <p>Transparency, answerability, and responsible leadership.</p>
+          </article>
+
+          <article class="value-card">
+            <h3>Inclusion</h3>
+            <p>Meaningful participation and respect for every community.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
+    <!-- CONTACT -->
+    <section class="soft-bg" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Contact EASJ INC</h2>
+          <div class="gold-line"></div>
+          <p>
+            Contact our organization for inquiries, collaboration,
+            advocacy engagement, and official correspondence.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Official Contact Information</h3>
+
+            <p><strong>Organization:</strong></p>
+            <p>
+              Education Accountability and Social Justice (EASJ INC)
+            </p>
+
+            <br>
+
+            <p><strong>Organizational identity:</strong></p>
+            <p>Alliance for Justice, Fairness and Freedom</p>
+
+            <br>
+
+            <p><strong>Founder, CEO &amp; Executive Director:</strong></p>
+            <p>Advocate Amen Saakollie Sheriff</p>
+
+            <br>
+
+            <p><strong>Official email:</strong></p>
+            <p>
+              <a href="mailto:easjinc2024@gmail.com">
+                easjinc2024@gmail.com
+              </a>
+            </p>
+
+            <br>
+
+            <p><strong>Telephone numbers:</strong></p>
+            <ul class="phone-list">
+              <li>
+                <a href="tel:+231886442975">
+                  +231 886 442 975
+                </a>
+                <br>
+                <a class="call-link" href="tel:+231886442975">
+                  Call EASJ INC — Line 1
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:+231770442975">
+                  +231 770 442 975
+                </a>
+                <br>
+                <a class="call-link" href="tel:+231770442975">
+                  Call EASJ INC — Line 2
+                </a>
+              </li>
+            </ul>
+
+            <p class="small-note">
+              Telephone links can open your phone's calling application
+              on supported devices.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Work With Us</h3>
+
+            <p>
+              EASJ INC welcomes constructive engagement with citizens,
+              educators, civil society organizations, community leaders,
+              researchers, development partners, and other stakeholders
+              who share its commitment to justice and accountability.
+            </p>
+
+            <br>
+
+            <p>
+              For official inquiries, correspondence, publication requests,
+              or partnership proposals, use our organizational email address.
+            </p>
+
+            <br>
+
+            <a class="btn"
+               href="mailto:easjinc2024@gmail.com?subject=EASJ%20INC%20Inquiry">
+              Email EASJ INC
+            </a>
+
+            <div class="contact-note">
+              <strong>Our commitment:</strong>
+              Promoting Accountability, Advancing Justice,
+              Empowering Communities, and Strengthening Institutions.
+            </div>
+
+            <br>
+
+            <h3>Our Motto</h3>
+            <p class="founder-title">
+              JUSTICE &bull; FAIRNESS &bull; FREEDOM
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <strong>
+        Education Accountability and Social Justice (EASJ INC)
+      </strong>
+    </p>
+
+    <p>Alliance for Justice, Fairness and Freedom</p>
+
+    <p class="footer-motto">
+      JUSTICE &bull; FAIRNESS &bull; FREEDOM
+    </p>
+
+    <p>
+      Promoting Accountability, Advancing Justice, Empowering Communities,
+      and Strengthening Institutions.
+    </p>
+
+    <div class="footer-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#pillars">Advocacy Pillars</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#partners">Partnerships</a>
+      <a href="#contact">Contact</a>
     </div>
 
-    <div class="container copyright">
-      © 2026 EASJ INC — All rights reserved.
-      <br>
-      Justice • Fairness • Freedom
-    </div>
+    <p>
+      Email:
+      <a href="mailto:easjinc2024@gmail.com">
+        easjinc2024@gmail.com
+      </a>
+    </p>
+
+    <p>
+      Phone:
+      <a href="tel:+231886442975">+231 886 442 975</a>
+      |
+      <a href="tel:+231770442975">+231 770 442 975</a>
+    </p>
+
+    <p>
+      &copy; <span id="year">2026</span>
+      EASJ INC. All rights reserved.
+    </p>
+
+    <p class="small-note" style="color:#DCE5EF;">
+      Official website of Education Accountability and Social Justice (EASJ INC).
+    </p>
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const navToggle = document.getElementById('nav-toggle');
-      const nav = document.getElementById('primary-nav');
+    (function () {
+      var yearElement = document.getElementById("year");
 
-      if (navToggle && nav) {
-        navToggle.addEventListener('click', function () {
-          const expanded =
-            navToggle.getAttribute('aria-expanded') === 'true';
-
-          navToggle.setAttribute('aria-expanded', String(!expanded));
-          nav.classList.toggle('active');
-        });
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
       }
-
-      const form = document.getElementById('contact-form');
-
-      if (form) {
-        form.addEventListener('submit', function (event) {
-          event.preventDefault();
-
-          const nameInput = document.getElementById('name');
-          const emailInput = document.getElementById('email');
-          const messageInput = document.getElementById('message');
-
-          if (
-            !nameInput.value.trim() ||
-            !emailInput.value.trim() ||
-            !messageInput.value.trim()
-          ) {
-            alert('Please complete all form fields.');
-            return;
-          }
-
-          alert(
-            'Thank you for contacting EASJ INC. ' +
-            'This is a demonstration form; your message has not been sent.'
-          );
-
-          form.reset();
-        });
-      }
-    });
+    })();
   </script>
+
 </body>
 </html>
