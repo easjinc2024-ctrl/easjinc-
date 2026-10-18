@@ -1,12 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EASJ INC | Alliance for Justice, Fairness and Freedom</title>
-  <meta name="description" content="Education Accountability and Social Justice (EASJ INC) — Alliance for Justice, Fairness and Freedom. Promoting accountability, advancing justice, empowering communities and defending human rights." />
-  <meta name="keywords" content="EASJ INC, Education Accountability, Social Justice, Liberia, Human Rights, Education, Accountability, Justice, Fairness, Freedom" />
-  <meta name="author" content="Advocate Amen Saakollie Sheriff" />
+  <meta name="description" content="Education Accountability and Social Justice (EASJ INC) — Alliance for Justice, Fairness and Freedom. Promoting accountability, advancing justice, empowering communities and defending human rights.">
+  <meta name="keywords" content="EASJ INC, Education Accountability, Social Justice, Liberia, Human Rights, Education, Accountability, Justice, Fairness, Freedom">
+  <meta name="author" content="Advocate Amen Saakollie Sheriff">
+
   <style>
     :root {
       --navy: #0a2342;
@@ -23,6 +25,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -45,6 +48,7 @@
       left: -9999px;
       top: auto;
     }
+
     .skip-link:focus {
       left: 14px;
       top: 14px;
@@ -79,11 +83,12 @@
     .logo {
       width: 62px;
       height: 62px;
+      flex-shrink: 0;
       border-radius: 50%;
       border: 3px solid var(--gold);
       background: linear-gradient(135deg, var(--navy), var(--green));
       position: relative;
-      box-shadow: 0 8px 20px rgba(10, 35, 66, 0.15);
+      box-shadow: 0 8px 20px rgba(10,35,66,0.15);
     }
 
     .logo::before {
@@ -197,6 +202,7 @@
       font-weight: 700;
       border: 1px solid transparent;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
     }
 
     .btn:hover, .btn:focus-visible {
@@ -258,9 +264,7 @@
       font-size: 1.8rem;
     }
 
-    .impact-card p {
-      color: rgba(255,255,255,0.85);
-    }
+    .impact-card p { color: rgba(255,255,255,0.85); }
 
     .small-link {
       display: inline-block;
@@ -269,9 +273,7 @@
       font-weight: 600;
     }
 
-    .section {
-      padding: 88px 0;
-    }
+    .section { padding: 88px 0; }
 
     .section-title {
       text-align: center;
@@ -351,9 +353,7 @@
       gap: 20px;
     }
 
-    .feature-card {
-      border-top: 4px solid var(--blue);
-    }
+    .feature-card { border-top: 4px solid var(--blue); }
 
     .icon {
       font-size: 2rem;
@@ -381,6 +381,19 @@
       background: linear-gradient(180deg, #f7fbfd 0%, #ffffff 100%);
     }
 
+    /* Contact links: clearly visible and clickable */
+    .contact-details a,
+    .contact-details a:visited {
+      color: var(--green);
+      text-decoration: underline;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-details a:hover,
+    .contact-details a:focus-visible {
+      color: var(--blue);
+    }
+
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -398,7 +411,7 @@
       border: 1px solid #dbe4ef;
       border-radius: 10px;
       padding: 12px 14px;
-      background: #fff;
+      background: white;
       color: var(--text);
     }
 
@@ -429,7 +442,28 @@
     .site-footer p,
     .site-footer li,
     .site-footer a {
-      color: rgba(255,255,255,0.82);
+      color: rgba(255,255,255,0.88);
+    }
+
+    /* Explicitly keep both phone numbers visible on the dark footer */
+    .site-footer .footer-phone,
+    .site-footer .footer-phone strong,
+    .site-footer .footer-phone a,
+    .site-footer .footer-phone a:visited {
+      color: #ffffff !important;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .site-footer .footer-phone a {
+      display: inline-block;
+      text-decoration: underline;
+      overflow-wrap: anywhere;
+    }
+
+    .site-footer .footer-phone a:hover,
+    .site-footer .footer-phone a:focus-visible {
+      color: #f2cc70 !important;
     }
 
     .site-footer ul {
@@ -479,9 +513,11 @@
       .hero-actions { flex-direction: column; align-items: stretch; }
       .btn { width: 100%; }
       .partners-grid, .footer-grid { grid-template-columns: 1fr; }
+      .site-footer .footer-phone a { font-size: 16px; }
     }
   </style>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -495,7 +531,8 @@
         </div>
       </a>
 
-      <button id="nav-toggle" class="menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <button id="nav-toggle" class="menu-btn" type="button"
+        aria-expanded="false" aria-controls="primary-nav">Menu</button>
 
       <nav id="primary-nav" class="nav" aria-label="Primary navigation">
         <ul>
@@ -561,7 +598,7 @@
 
           <aside class="info-card">
             <h3>Founder</h3>
-            <p><strong>Advocate Amen Saakollie Sheriff</strong><br>Founder, CEO & Executive Director</p>
+            <p><strong>Advocate Amen Saakollie Sheriff</strong><br>Founder, CEO &amp; Executive Director</p>
             <div class="signature">Leadership for accountability, justice, and community transformation.</div>
           </aside>
         </div>
@@ -578,7 +615,7 @@
         <div class="grid-3">
           <article class="feature-card">
             <div class="icon">⚖️</div>
-            <h3>Justice & Rule of Law</h3>
+            <h3>Justice &amp; Rule of Law</h3>
             <p>Promoting equal access to justice, due process, and institutional integrity.</p>
           </article>
           <article class="feature-card">
@@ -613,7 +650,7 @@
     <section id="programs" class="section">
       <div class="container">
         <div class="section-title">
-          <h2>Programs & Areas of Engagement</h2>
+          <h2>Programs &amp; Areas of Engagement</h2>
           <p>EASJ INC uses advocacy, public education, research, and community engagement to advance positive social change.</p>
         </div>
 
@@ -665,29 +702,40 @@
     <section id="contact" class="section contact-section">
       <div class="container">
         <div class="section-title">
-          <h2>Contact & Connect</h2>
+          <h2>Contact &amp; Connect</h2>
           <p>Let’s work together for justice, accountability, and social transformation.</p>
         </div>
 
         <div class="two-col contact-grid">
-          <div class="info-card">
+          <div class="info-card contact-details">
             <h3>Get in touch</h3>
-            <p><strong>Email:</strong> <a href="mailto:easjinc2024@gmail.com">easjinc2024@gmail.com</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/easjinc2024-ctrl" target="_blank" rel="noopener noreferrer">easjinc2024-ctrl</a></p>
-            <p><strong>Phone:</strong>
-              <a href="tel:+231886442975">+231 88 644 2975</a> /
-              <a href="tel:+231770442975">+231 77 044 2975</a>
+
+            <p><strong>Email:</strong>
+              <a href="mailto:easjinc2024@gmail.com">easjinc2024@gmail.com</a>
             </p>
+
+            <p><strong>GitHub:</strong>
+              <a href="https://github.com/easjinc2024-ctrl" target="_blank" rel="noopener noreferrer">easjinc2024-ctrl</a>
+            </p>
+
+            <p><strong>Phone 1:</strong>
+              <a href="tel:+231886442975">+231 886 442 975</a>
+            </p>
+
+            <p><strong>Phone 2:</strong>
+              <a href="tel:+231770442975">+231 770 442 975</a>
+            </p>
+
             <p><strong>Location:</strong> Liberia</p>
             <p><strong>Focus:</strong> Accountability, Education, Human Rights, Justice</p>
           </div>
 
           <form id="contact-form" class="contact-form" novalidate>
             <label for="name">Full name</label>
-            <input id="name" name="name" type="text" required />
+            <input id="name" name="name" type="text" required>
 
             <label for="email">Email address</label>
-            <input id="email" name="email" type="email" required />
+            <input id="email" name="email" type="email" required>
 
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
@@ -701,48 +749,56 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
+
+      <!-- Organization and contact information -->
       <div>
-        <h3>
-<h3>EASJ INC</h3>
-<p>Alliance for Justice • Fairness • Freedom</p>
+        <h3>EASJ INC</h3>
+        <p>Alliance for Justice • Fairness • Freedom</p>
 
-<p style="margin-top:8px; color:#0A2342;">
-  <strong>Phone:</strong>
-  <a href="tel:+231886442975"
-     style="color:#005A3C; text-decoration:underline;">
-    +231 886 442 975
-  </a>
-  /
-  <a href="tel:+231770442975"
-     style="color:#005A3C; text-decoration:underline;">
-    +231 770 442 975
-  </a>
-</p>
-</div>
+        <p class="footer-phone">
+          <strong>Phone 1:</strong>
+          <a href="tel:+231886442975">+231 886 442 975</a>
+        </p>
 
-<div>
+        <p class="footer-phone">
+          <strong>Phone 2:</strong>
+          <a href="tel:+231770442975">+231 770 442 975</a>
+        </p>
 
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:easjinc2024@gmail.com">easjinc2024@gmail.com</a>
+        </p>
+      </div>
 
+      <!-- Website navigation -->
       <div>
         <h3>Explore</h3>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#pillars">Pillars</a></li>
           <li><a href="#programs">Programs</a></li>
+          <li><a href="#partners">Partners</a></li>
         </ul>
       </div>
 
+      <!-- Organization links -->
       <div>
         <h3>Connect</h3>
         <ul>
-          <li><a href="mailto:easjinc2024@gmail.com">Email</a></li>
+          <li><a href="mailto:easjinc2024@gmail.com">Email EASJ INC</a></li>
           <li><a href="https://github.com/easjinc2024-ctrl" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
+
     </div>
 
-    <div class="container copyright">© 2026 EASJ INC — All rights reserved.</div>
+    <div class="container copyright">
+      © 2026 EASJ INC — All rights reserved.
+      <br>
+      Justice • Fairness • Freedom
+    </div>
   </footer>
 
   <script>
@@ -752,26 +808,38 @@
 
       if (navToggle && nav) {
         navToggle.addEventListener('click', function () {
-          const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+          const expanded =
+            navToggle.getAttribute('aria-expanded') === 'true';
+
           navToggle.setAttribute('aria-expanded', String(!expanded));
           nav.classList.toggle('active');
         });
       }
 
       const form = document.getElementById('contact-form');
+
       if (form) {
         form.addEventListener('submit', function (event) {
           event.preventDefault();
+
           const nameInput = document.getElementById('name');
           const emailInput = document.getElementById('email');
           const messageInput = document.getElementById('message');
 
-          if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
+          if (
+            !nameInput.value.trim() ||
+            !emailInput.value.trim() ||
+            !messageInput.value.trim()
+          ) {
             alert('Please complete all form fields.');
             return;
           }
 
-          alert('Thank you for contacting EASJ INC. Your message has been recorded in this demo version.');
+          alert(
+            'Thank you for contacting EASJ INC. ' +
+            'This is a demonstration form; your message has not been sent.'
+          );
+
           form.reset();
         });
       }
